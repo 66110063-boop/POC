@@ -130,67 +130,96 @@ document.addEventListener('DOMContentLoaded', () => {
         <p>อัปโหลดภาพถ่ายและกรอกข้อมูลวันเวลาเกิด เพื่อให้ระบบ AI วิเคราะห์โครงหน้า สัดส่วนร่างกาย และพลังงานประจำตัวของคุณ (โปรไฟล์ปัจจุบัน: <b>${data.name}</b>)</p>
       </div>
 
-      <!-- Upload Grid -->
-      <div class="upload-grid">
-        <!-- Face Upload -->
-        <div class="panel upload-panel">
-          <h3 class="upload-title">ภาพถ่ายใบหน้า</h3>
-          <div class="upload-sub">แนะนำ: หน้าตรง แสงสว่างเพียงพอ เห็นสัดส่วนใบหน้าชัดเจน</div>
-          <div class="upload-dropzone">
-            <img src="${data.photos.face}" alt="Face Scan">
-            <div class="upload-overlay">
-              <span style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase;">01 / Face Topography</span>
-              <span style="color:var(--gold-lt); font-size:11px;">ตรวจจับ 68 จุด</span>
+      <!-- Step 1 Studio Console: 3-Column Diagnostic Layout -->
+      <div class="step1-studio-grid">
+        <!-- Column 1: Face Scan -->
+        <div class="step1-card">
+          <div class="step1-card-h">
+            <div>
+              <h3 style="font-size:16px; color:var(--plum); font-weight:700;">ภาพถ่ายใบหน้า</h3>
+              <div style="font-size:12px; color:#8a7d6a;">หน้าตรง แสงสว่างเห็นสัดส่วนชัดเจน</div>
+            </div>
+            <span class="tag tag-gold" style="font-size:11px;">Face Scan</span>
+          </div>
+          <div class="step1-card-body">
+            <div class="step1-dropzone">
+              <img src="${data.photos.face}" alt="Face Scan">
+              <div class="upload-overlay">
+                <span style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase;">01 / Face Topography</span>
+                <span style="color:var(--gold-lt); font-size:11px;">ตรวจจับ 68 จุด</span>
+              </div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; font-size:12px; color:#6b5f4f;">
+              <span>สถานะ: <b>ประมวลผลเสร็จสิ้น</b></span>
+              <span style="color:var(--jade); font-weight:600;">✓ พร้อมวิเคราะห์</span>
             </div>
           </div>
         </div>
 
-        <!-- Body Upload -->
-        <div class="panel upload-panel">
-          <h3 class="upload-title">ภาพถ่ายเต็มตัว</h3>
-          <div class="upload-sub">แนะนำ: ยืนตรง เห็นสัดส่วนโครงสร้างร่างกายชัดเจนตั้งแต่ศีรษะจรดเท้า</div>
-          <div class="upload-dropzone">
-            <img src="${data.photos.body}" alt="Body Scan">
-            <div class="upload-overlay">
-              <span style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase;">02 / Skeletal Geometry</span>
-              <span style="color:var(--gold-lt); font-size:11px;">วิเคราะห์กระดูก 14 จุด</span>
+        <!-- Column 2: Body Scan -->
+        <div class="step1-card">
+          <div class="step1-card-h">
+            <div>
+              <h3 style="font-size:16px; color:var(--plum); font-weight:700;">ภาพถ่ายเต็มตัว</h3>
+              <div style="font-size:12px; color:#8a7d6a;">ยืนตรง เห็นสรีระและโครงกระดูกชัดเจน</div>
+            </div>
+            <span class="tag tag-gold" style="font-size:11px;">Body Scan</span>
+          </div>
+          <div class="step1-card-body">
+            <div class="step1-dropzone">
+              <img src="${data.photos.body}" alt="Body Scan">
+              <div class="upload-overlay">
+                <span style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase;">02 / Skeletal Geometry</span>
+                <span style="color:var(--gold-lt); font-size:11px;">วิเคราะห์กระดูก 14 จุด</span>
+              </div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; font-size:12px; color:#6b5f4f;">
+              <span>สถานะ: <b>ประมวลผลเสร็จสิ้น</b></span>
+              <span style="color:var(--jade); font-weight:600;">✓ พร้อมวิเคราะห์</span>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Form Card -->
-      <div class="panel">
-        <div class="panel-h gold">
-          <h3>ข้อมูลวันเวลาเกิด & พิกัดภูมิลำเนา</h3>
-          <span style="font-size:12px; color:var(--gold-lt);">${data.birth.solarDegree}</span>
-        </div>
-        <div class="panel-body">
-          <div class="form-grid-3">
-            <div class="form-field">
-              <label>วัน เดือน ปีเกิด</label>
-              <input type="text" value="${data.birth.date}" readonly>
+        <!-- Column 3: Natal Chart & Birth Form -->
+        <div class="step1-card form-col">
+          <div class="step1-card-h gold">
+            <div>
+              <h3 style="color:var(--gold-lt); font-size:16px;">ข้อมูลวันเวลาเกิด & พิกัดภูมิลำเนา</h3>
+              <div style="font-size:12px; color:rgba(255,255,255,0.75);">ใช้คำนวณตำแหน่งดวงดาวและลัคนา</div>
             </div>
-            <div class="form-field">
-              <label>วันกำเนิด & ดาวครองวัน</label>
-              <input type="text" value="${data.birth.dayName}" readonly>
-            </div>
-            <div class="form-field">
-              <label>เวลาตกฟาก (Solar True Time)</label>
-              <input type="text" value="${data.birth.time}" readonly>
-            </div>
-            <div class="form-field">
-              <label>จังหวัดเกิด (ภูมิลำเนา)</label>
-              <input type="text" value="${data.birth.province}" readonly>
-            </div>
-            <div class="form-field span-2" style="grid-column:span 2;">
-              <label>ลัคนาราศี & ดาวเกษตรบดี</label>
-              <input type="text" value="${data.birth.lagna} — ${data.birth.rulingPlanet}" readonly>
-            </div>
+            <span style="font-size:11.5px; color:var(--gold-lt); font-family:var(--font-mono);">${data.birth.solarDegree}</span>
           </div>
+          <div class="step1-card-body">
+            <div class="step1-form-grid">
+              <div class="form-field">
+                <label>วัน เดือน ปีเกิด</label>
+                <input type="text" value="${data.birth.date}" readonly>
+              </div>
+              <div class="form-field">
+                <label>วันกำเนิด & ดาวครองวัน</label>
+                <input type="text" value="${data.birth.dayName}" readonly>
+              </div>
+              <div class="form-field">
+                <label>เวลาตกฟาก (Solar True Time)</label>
+                <input type="text" value="${data.birth.time}" readonly>
+              </div>
+              <div class="form-field">
+                <label>จังหวัดเกิด (ภูมิลำเนา)</label>
+                <input type="text" value="${data.birth.province}" readonly>
+              </div>
+              <div class="form-field full-w">
+                <label>ลัคนาราศี & ดาวเกษตรบดี</label>
+                <input type="text" value="${data.birth.lagna} — ${data.birth.rulingPlanet}" readonly>
+              </div>
+            </div>
 
-          <div class="btn-row">
-            <button class="btn btn-primary" onclick="window.goStep(2)">
+            <div class="natal-summary-box">
+              <div style="font-weight:600; color:var(--plum); margin-bottom:4px;">✨ ข้อมูลดวงชะตาคำนวณเบื้องต้น</div>
+              <div>• <b>พลังงานออร่า:</b> ${data.astrologyProfile.auraName}</div>
+              <div>• <b>สีมงคลประจำตัว:</b> ${data.astrologyProfile.dailyAuspicious.color}</div>
+            </div>
+
+            <button class="btn btn-primary step1-cta-btn" onclick="window.goStep(2)">
               <span>เริ่มวิเคราะห์โหงวเฮ้ง & สรีระ →</span>
             </button>
           </div>
