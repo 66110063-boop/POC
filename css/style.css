@@ -53,12 +53,11 @@ h1, h2, h3, h4 {
   color: var(--ink);
 }
 
-/* Container หลักคุมความกว้างไม่ให้ล้นจอ Desktop */
-.container, .app {
+.app {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px 80px;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 clamp(20px, 3.5vw, 60px) 60px;
   box-sizing: border-box;
 }
 
@@ -66,20 +65,19 @@ h1, h2, h3, h4 {
 .topbar {
   background: var(--plum);
   color: var(--ivory);
-  padding: 16px 20px;
+  padding: 14px clamp(20px, 3.5vw, 60px);
   position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 4px 20px rgba(42, 27, 46, 0.15);
   width: 100%;
+  box-sizing: border-box;
 }
 
 .topbar-inner {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -176,19 +174,20 @@ h1, h2, h3, h4 {
 .rail {
   display: flex;
   gap: 0;
-  margin: 36px 0 44px;
+  margin: 16px 0 20px;
   border-bottom: 1px solid var(--line);
   overflow: hidden;
+  width: 100%;
 }
 
 .rail-step {
   flex: 1;
   text-align: center;
-  padding: 0 0 16px;
+  padding: 0 0 10px;
   position: relative;
   cursor: pointer;
   color: #9c8f7c;
-  font-size: 14.5px;
+  font-size: 14px;
   font-weight: 500;
   transition: all 0.15s var(--ease-out);
 }
@@ -252,20 +251,21 @@ h1, h2, h3, h4 {
 }
 
 .intro {
-  max-width: 960px;
-  margin-bottom: 32px;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 18px;
 }
 
 .intro h1 {
-  font-size: clamp(24px, 2.2vw, 32px);
-  margin-bottom: 8px;
+  font-size: clamp(20px, 1.8vw, 28px);
+  margin-bottom: 4px;
   color: var(--plum);
 }
 
 .intro p {
   color: #6b5f4f;
-  font-size: clamp(14px, 1.05vw, 16px);
-  line-height: 1.6;
+  font-size: clamp(13px, 0.95vw, 15px);
+  line-height: 1.5;
 }
 
 .panel {
@@ -720,32 +720,28 @@ h1, h2, h3, h4 {
   color: var(--plum);
 }
 
-/* DESKTOP (จอคอม): แสดง 3 คอลัมน์สมดุล */
+/* ===== STEP 1: STUDIO 3-COLUMN CONSOLE ===== */
 .step1-studio-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.25fr; /* ปรับสัดส่วนซ้าย-กลาง-ขวา */
-  gap: 24px;
+  grid-template-columns: 1fr 1fr 1.25fr;
+  gap: 20px;
   align-items: stretch;
-  margin-bottom: 28px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .step1-card {
-  background: var(--white, #ffffff);
-  border: 1px solid var(--line, #e2e8f0);
-  border-radius: 16px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(28, 20, 16, 0.03);
   display: flex;
   flex-direction: column;
 }
 
-.item-thumb {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
 .step1-card-h {
-  padding: 16px 20px;
+  padding: 12px 18px;
   border-bottom: 1px solid var(--line);
   display: flex;
   align-items: center;
@@ -759,7 +755,7 @@ h1, h2, h3, h4 {
 }
 
 .step1-card-body {
-  padding: 20px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -767,15 +763,15 @@ h1, h2, h3, h4 {
 }
 
 .step1-dropzone {
-  height: 480px;
+  height: clamp(300px, 42vh, 420px);
   width: 100%;
   position: relative;
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
   border: 1.5px dashed var(--gold);
   background: var(--ivory-2);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .step1-dropzone img {
@@ -788,8 +784,17 @@ h1, h2, h3, h4 {
 .step1-form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-bottom: 16px;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.step1-form-grid .form-field input {
+  padding: 8px 10px;
+  font-size: 13.5px;
+}
+
+.step1-form-grid .form-field label {
+  font-size: 12px;
 }
 
 .step1-form-grid .full-w {
@@ -799,18 +804,19 @@ h1, h2, h3, h4 {
 .natal-summary-box {
   background: var(--ivory-2);
   border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 14px 16px;
-  font-size: 13.5px;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 12.5px;
   color: #6b5f4f;
-  margin-bottom: 20px;
-  line-height: 1.6;
+  margin-bottom: 14px;
+  line-height: 1.5;
 }
 
 .step1-cta-btn {
   width: 100%;
-  padding: 16px 24px;
-  font-size: 16px;
+  padding: 13px 20px;
+  font-size: 15px;
+  font-weight: 600;
   justify-content: center;
 }
 
@@ -1034,21 +1040,6 @@ h1, h2, h3, h4 {
     flex-shrink: 0;
     padding: 8px 16px;
     font-size: 13px;
-  }
-/* MOBILE (มือถือ): สลับเป็น 1 คอลัมน์ทันทีเมื่อจอแคบกว่า 768px */
-@media (max-width: 768px) {
-  .step1-studio-grid {
-    grid-template-columns: 1fr; /* ยุบเหลือคอลัมน์เดียวเรียงลงมา */
-    gap: 16px;
-    margin-bottom: 20px;
-  }
-
-  .item-thumb {
-    height: 180px; /* ลดความสูงรูปภาพไม่ให้กินพื้นที่จอมือถือ */
-  }
-
-  .step1-card {
-    padding: 16px;
   }
 }
 
