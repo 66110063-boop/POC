@@ -1,0 +1,499 @@
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 */
+/* Hallmark · genre: luxury-editorial · theme: astral-atelier · macrostructure: editorial-catalog */
+
+/* ==========================================================================
+   Hallmark Design System: Astral Atelier (Luxury Editorial)
+   Strict anti-slop rules:
+   1. OKLCH color space only. No pure black/white. Tinted neutrals.
+   2. Single accent (Warm Celestial Gold) covering <= 3% of viewport.
+   3. 2+1 Typography rule: Cormorant Garamond / Noto Serif Thai (Display) +
+      Geist / IBM Plex Sans Thai (Body) + Geist Mono (Outlier/Data).
+   4. Roman headers only. No italic in titles. No gradient text.
+   5. No re-drawn fake phone frames or toy notches.
+   6. No emoji clutter in badges or headers.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&family=Noto+Serif+Thai:wght@400;600&display=swap');
+
+:root {
+  /* OKLCH Palette (Anchor: Warm Astral Bronze Hue 55) */
+  --color-paper:       oklch(14% 0.008 55);    /* deep obsidian base surface */
+  --color-paper-2:     oklch(17% 0.010 55);    /* elevated card surface */
+  --color-paper-3:     oklch(21% 0.012 55);    /* hover & interactive surface */
+  --color-rule:        oklch(26% 0.008 55);    /* 1px hairline border */
+  --color-rule-subtle: oklch(20% 0.006 55);    /* inner dividers */
+  --color-neutral:     oklch(64% 0.008 55);    /* secondary typography */
+  --color-muted:       oklch(46% 0.006 55);    /* captions & metadata */
+  --color-ink:         oklch(96% 0.004 65);    /* primary solid text */
+  --color-ink-faint:   oklch(78% 0.006 65);    /* lede typography */
+  --color-accent:      oklch(76% 0.140 78);    /* warm celestial gold (<=3% area) */
+  --color-accent-sub:  oklch(84% 0.080 78);    /* light gold tint */
+  --color-focus:       oklch(76% 0.140 78);    /* instant focus ring */
+
+  /* Typography Families (Strict 2+1 Rule) */
+  --font-display: 'Cormorant Garamond', 'Noto Serif Thai', serif;
+  --font-body:    'Geist', 'IBM Plex Sans Thai', -apple-system, sans-serif;
+  --font-outlier: 'Geist Mono', monospace;
+
+  /* Spacing Scale (4pt increments) */
+  --space-3xs: 0.25rem;  /* 4px */
+  --space-2xs: 0.5rem;   /* 8px */
+  --space-xs:  0.75rem;  /* 12px */
+  --space-s:   1rem;     /* 16px */
+  --space-m:   1.5rem;   /* 24px */
+  --space-l:   2rem;     /* 32px */
+  --space-xl:  3rem;     /* 48px */
+
+  /* Animation Easing (Exponential ease-out, no overshoots) */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Reset & Measure */
+html {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-paper);
+  overflow-x: clip;
+  min-height: 100vh;
+}
+
+/* Typography Discipline (Gate 38a: No italic headers) */
+h1, h2, h3, h4, h5, h6, .display-heading {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--color-ink);
+  line-height: 1.15;
+}
+
+.mono-numeral {
+  font-family: var(--font-outlier);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Measure Constraint */
+.prose-measure {
+  max-width: 65ch;
+}
+
+/* ==========================================================================
+   Editorial Masthead & Navigation Strip
+   ========================================================================== */
+.masthead {
+  border-bottom: 1px solid var(--color-rule);
+  background-color: var(--color-paper);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.masthead-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-s) var(--space-m);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-m);
+}
+
+.brand-wordmark {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+}
+
+.brand-badge {
+  font-family: var(--font-outlier);
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  padding: 2px 6px;
+  border: 1px solid var(--color-rule);
+  color: var(--color-muted);
+  border-radius: 2px;
+}
+
+/* Persona Segment Control (Hallmark 8-State Compliant) */
+.persona-segment {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-rule);
+  background-color: var(--color-paper-2);
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.persona-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-neutral);
+  font-family: var(--font-outlier);
+  font-size: 0.725rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: color 0.15s var(--ease-out), background-color 0.15s var(--ease-out);
+}
+
+.persona-btn:hover {
+  color: var(--color-ink);
+  background-color: var(--color-paper-3);
+}
+
+.persona-btn:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: -1px;
+}
+
+.persona-btn:active {
+  transform: translateY(1px);
+}
+
+.persona-btn.active {
+  color: var(--color-paper);
+  background-color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* Step Bar */
+.step-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+.step-nav-btn {
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  font-family: var(--font-outlier);
+  font-size: 0.725rem;
+  padding: 6px 0;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.15s var(--ease-out);
+}
+
+.step-nav-btn:hover {
+  color: var(--color-ink);
+}
+
+.step-nav-btn:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.step-nav-btn.active {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.step-nav-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+}
+
+/* ==========================================================================
+   Editorial Stage Layout (Real Viewport, No Toy Phones)
+   ========================================================================== */
+.editorial-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: var(--space-l) var(--space-m) var(--space-xl) var(--space-m);
+}
+
+.screen-header-block {
+  border-bottom: 1px solid var(--color-rule);
+  padding-bottom: var(--space-m);
+  margin-bottom: var(--space-l);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-m);
+}
+
+.screen-step-tag {
+  font-family: var(--font-outlier);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin-bottom: var(--space-3xs);
+}
+
+.screen-title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-ink);
+}
+
+.screen-lede {
+  color: var(--color-ink-faint);
+  font-size: 0.95rem;
+  margin-top: var(--space-2xs);
+  max-width: 58ch;
+}
+
+/* ==========================================================================
+   Cards & Surfaces (Hairline Rule, Single Containment Layer)
+   ========================================================================== */
+.editorial-card {
+  background-color: var(--color-paper-2);
+  border: 1px solid var(--color-rule);
+  border-radius: 4px;
+  padding: var(--space-m);
+  transition: border-color 0.2s var(--ease-out);
+}
+
+.editorial-card:hover {
+  border-color: var(--color-neutral);
+}
+
+.card-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--color-rule-subtle);
+  padding-bottom: var(--space-2xs);
+}
+
+.card-label {
+  font-family: var(--font-outlier);
+  font-size: 0.675rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+}
+
+/* ==========================================================================
+   Physiognomy & Scanner Elements (Clean Coordinate Crosshairs)
+   ========================================================================== */
+.portrait-frame {
+  position: relative;
+  background-color: var(--color-paper-2);
+  border: 1px solid var(--color-rule);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.crosshair-point {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.2);
+}
+
+.crosshair-point::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+}
+
+.crosshair-tag {
+  position: absolute;
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-rule);
+  color: var(--color-ink);
+  font-family: var(--font-outlier);
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border-radius: 2px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 25;
+}
+
+/* ==========================================================================
+   Astrological Aura Visualizer (Ethereal Dual-Layer Subtle Field)
+   ========================================================================== */
+.aura-stage {
+  position: relative;
+  height: 320px;
+  border: 1px solid var(--color-rule);
+  background-color: var(--color-paper-2);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.aura-ambient-ring {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  filter: blur(45px);
+  opacity: 0.45;
+  transition: background 0.6s var(--ease-out);
+}
+
+.aura-portrait-circle {
+  position: relative;
+  z-index: 10;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--color-rule);
+}
+
+.aura-portrait-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   Occasion Selector & Complete Look
+   ========================================================================== */
+.occasion-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  margin-bottom: var(--space-m);
+}
+
+.occasion-tab {
+  background-color: var(--color-paper-2);
+  border: 1px solid var(--color-rule);
+  color: var(--color-neutral);
+  font-family: var(--font-outlier);
+  font-size: 0.75rem;
+  padding: var(--space-2xs) var(--space-s);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s var(--ease-out);
+}
+
+.occasion-tab:hover {
+  border-color: var(--color-neutral);
+  color: var(--color-ink);
+}
+
+.occasion-tab:focus-visible {
+  outline: 2px solid var(--color-focus);
+}
+
+.occasion-tab.active {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  border-color: var(--color-ink);
+  font-weight: 600;
+}
+
+/* Action Button (Solid Ink or Accent Border) */
+.primary-btn {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 12px 24px;
+  border-radius: 3px;
+  border: 1px solid var(--color-ink);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2xs);
+  transition: all 0.15s var(--ease-out);
+}
+
+.primary-btn:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-paper);
+}
+
+.primary-btn:active {
+  transform: translateY(1px);
+}
+
+.primary-btn:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 11px 20px;
+  border-radius: 3px;
+  border: 1px solid var(--color-rule);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2xs);
+  transition: all 0.15s var(--ease-out);
+}
+
+.secondary-btn:hover {
+  border-color: var(--color-neutral);
+  background-color: var(--color-paper-2);
+}
+
+/* Screen Transitions */
+.screen-stage {
+  display: none;
+}
+
+.screen-stage.active-stage {
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .masthead-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .step-nav {
+    overflow-x: auto;
+    padding-bottom: var(--space-2xs);
+  }
+  .screen-title {
+    font-size: 1.75rem;
+  }
+}
