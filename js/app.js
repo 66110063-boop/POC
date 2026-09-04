@@ -14,6 +14,36 @@ document.addEventListener('DOMContentLoaded', () => {
   init();
 
   function init() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('persona')) {
+      const p = params.get('persona');
+      if (p === 'female' || p === 'male') state.currentPersona = p;
+    }
+    if (params.has('step')) {
+      const s = parseInt(params.get('step'));
+      if (s >= 1 && s <= 5) state.currentScreen = s;
+    }
+    if (params.has('occ')) {
+      state.currentOccasion = params.get('occ');
+    }
+
+    // Sync persona button UI
+    document.querySelectorAll('.persona-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.persona === state.currentPersona);
+    });
+
+    // Sync Step Rail UI
+    document.querySelectorAll('.rail-step').forEach(stepEl => {
+      const s = parseInt(stepEl.dataset.step);
+      stepEl.classList.toggle('active', s === state.currentScreen);
+      stepEl.classList.toggle('done', s < state.currentScreen);
+    });
+
+    // Toggle Screen Visibility
+    document.querySelectorAll('.screen').forEach((scr, idx) => {
+      scr.classList.toggle('show', (idx + 1) === state.currentScreen);
+    });
+
     renderAll();
   }
 
@@ -36,6 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
       stepEl.classList.toggle('active', s === stepNum);
       stepEl.classList.toggle('done', s < stepNum);
     });
+
+    // Auto-scroll active step on mobile/tablet
+    const activeStepEl = document.querySelector(`.rail-step[data-step="${stepNum}"]`);
+    if (activeStepEl && window.innerWidth < 820) {
+      activeStepEl.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
 
     // Toggle Screen Visibility
     document.querySelectorAll('.screen').forEach((scr, idx) => {
@@ -95,14 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
 
       <!-- Upload Grid -->
-      <div class="upload-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:28px;">
+      <div class="upload-grid">
         <!-- Face Upload -->
-        <div class="panel" style="padding:24px; text-align:center; margin-bottom:0;">
-          <h3 style="font-size:17px; margin-bottom:6px;">ภาพถ่ายใบหน้า</h3>
-          <div style="font-size:13px; color:#8a7d6a; margin-bottom:16px;">แนะนำ: หน้าตรง แสงสว่างเพียงพอ เห็นสัดส่วนใบหน้าชัดเจน</div>
-          <div class="dropzone" style="height:360px; max-width:280px; margin:0 auto; position:relative; border-radius:14px; overflow:hidden; border:1.5px dashed var(--gold); background:var(--ivory-2); box-shadow:0 4px 14px rgba(0,0,0,0.04);">
-            <img src="${data.photos.face}" alt="Face Scan" style="width:100%; height:100%; object-fit:cover; object-position:top center;">
-            <div style="position:absolute; bottom:0; inset-x:0; background:rgba(42,27,46,0.92); backdrop-filter:blur(4px); color:var(--ivory); padding:10px 14px; font-size:12px; display:flex; justify-content:space-between; align-items:center;">
+        <div class="panel upload-panel">
+          <h3 class="upload-title">ภาพถ่ายใบหน้า</h3>
+          <div class="upload-sub">แนะนำ: หน้าตรง แสงสว่างเพียงพอ เห็นสัดส่วนใบหน้าชัดเจน</div>
+          <div class="upload-dropzone">
+            <img src="${data.photos.face}" alt="Face Scan">
+            <div class="upload-overlay">
               <span style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase;">01 / Face Topography</span>
               <span style="color:var(--gold-lt); font-size:11px;">ตรวจจับ 68 จุด</span>
             </div>
@@ -110,12 +146,12 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <!-- Body Upload -->
-        <div class="panel" style="padding:24px; text-align:center; margin-bottom:0;">
-          <h3 style="font-size:17px; margin-bottom:6px;">ภาพถ่ายเต็มตัว</h3>
-          <div style="font-size:13px; color:#8a7d6a; margin-bottom:16px;">แนะนำ: ยืนตรง เห็นสัดส่วนโครงสร้างร่างกายชัดเจนตั้งแต่ศีรษะจรดเท้า</div>
-          <div class="dropzone" style="height:360px; max-width:280px; margin:0 auto; position:relative; border-radius:14px; overflow:hidden; border:1.5px dashed var(--gold); background:var(--ivory-2); box-shadow:0 4px 14px rgba(0,0,0,0.04);">
-            <img src="${data.photos.body}" alt="Body Scan" style="width:100%; height:100%; object-fit:cover; object-position:center top;">
-            <div style="position:absolute; bottom:0; inset-x:0; background:rgba(42,27,46,0.92); backdrop-filter:blur(4px); color:var(--ivory); padding:10px 14px; font-size:12px; display:flex; justify-content:space-between; align-items:center;">
+        <div class="panel upload-panel">
+          <h3 class="upload-title">ภาพถ่ายเต็มตัว</h3>
+          <div class="upload-sub">แนะนำ: ยืนตรง เห็นสัดส่วนโครงสร้างร่างกายชัดเจนตั้งแต่ศีรษะจรดเท้า</div>
+          <div class="upload-dropzone">
+            <img src="${data.photos.body}" alt="Body Scan">
+            <div class="upload-overlay">
               <span style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase;">02 / Skeletal Geometry</span>
               <span style="color:var(--gold-lt); font-size:11px;">วิเคราะห์กระดูก 14 จุด</span>
             </div>
@@ -130,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <span style="font-size:12px; color:var(--gold-lt);">${data.birth.solarDegree}</span>
         </div>
         <div class="panel-body">
-          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:18px;">
+          <div class="form-grid-3">
             <div class="form-field">
               <label>วัน เดือน ปีเกิด</label>
               <input type="text" value="${data.birth.date}" readonly>
@@ -147,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <label>จังหวัดเกิด (ภูมิลำเนา)</label>
               <input type="text" value="${data.birth.province}" readonly>
             </div>
-            <div class="form-field" style="grid-column:span 2;">
+            <div class="form-field span-2" style="grid-column:span 2;">
               <label>ลัคนาราศี & ดาวเกษตรบดี</label>
               <input type="text" value="${data.birth.lagna} — ${data.birth.rulingPlanet}" readonly>
             </div>
@@ -228,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <!-- Curated Recommendations (Hair, Makeup, Eyewear) -->
       <div class="section-title">คำแนะนำเฉพาะบุคคล (Curated Directives)</div>
-      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; margin-bottom:28px;">
+      <div class="directives-grid">
         <!-- Hair -->
         <div class="panel" style="margin-bottom:0; overflow:hidden;">
           <div style="height:150px; overflow:hidden;">
@@ -294,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <p>โครงสร้างกระดูกคือชะตาฟ้าลิขิต ใช้การแต่งตัวมาช่วยแก้จุดบล็อกและขยายจุดเฮง (Motto: "${body.motto}")</p>
       </div>
 
-      <div style="display:grid; grid-template-columns:1.1fr 0.9fr; gap:24px; margin-bottom:24px;">
+      <div class="body-split-grid">
         <!-- Left: Body Type & Yin Yang -->
         <div class="panel" style="margin-bottom:0;">
           <div class="panel-h gold">
@@ -408,7 +444,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
 
       <!-- 4 Pillars & 5 Elements -->
-      <div style="display:grid; grid-template-columns:1.1fr 0.9fr; gap:24px; margin-bottom:28px;">
+      <div class="astro-split-grid">
         
         <!-- 4 Pillars Progress -->
         <div class="panel" style="margin-bottom:0;">
@@ -441,7 +477,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <span style="font-size:12px; font-weight:700;">Pancha Dhatu</span>
           </div>
           <div class="panel-body">
-            <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:8px; text-align:center; margin-bottom:16px;">
+            <div class="elements-grid-4">
               ${astro.elements.map(el => `
                 <div style="background:var(--ivory-2); padding:10px 4px; border-radius:8px; border:1px solid var(--line);">
                   <div style="font-size:11.5px; color:#6b5f4f;">${el.name}</div>
