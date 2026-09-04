@@ -99,12 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <!-- Face Upload -->
         <div class="panel" style="padding:24px; text-align:center; margin-bottom:0;">
           <h3 style="font-size:17px; margin-bottom:6px;">ภาพถ่ายใบหน้า</h3>
-          <div style="font-size:13px; color:#8a7d6a; margin-bottom:16px;">แนะนำ: หน้าตรง แสงสว่างเพียงพอ ไม่ใส่แว่นกันแดด</div>
-          <div class="dropzone" style="height:230px; position:relative; border-radius:12px; overflow:hidden; border:1.5px dashed var(--gold); background:var(--ivory);">
-            <img src="${data.photos.face}" alt="Face Scan" style="width:100%; height:100%; object-fit:cover;">
-            <div style="position:absolute; bottom:0; inset-x:0; background:rgba(42,27,46,0.85); color:var(--ivory); padding:8px 12px; font-size:12px; display:flex; justify-content:space-between; align-items:center;">
-              <span>01 / Face Topography</span>
-              <span style="color:var(--gold-lt);">ตรวจจับ 68 จุด</span>
+          <div style="font-size:13px; color:#8a7d6a; margin-bottom:16px;">แนะนำ: หน้าตรง แสงสว่างเพียงพอ เห็นสัดส่วนใบหน้าชัดเจน</div>
+          <div class="dropzone" style="height:360px; max-width:280px; margin:0 auto; position:relative; border-radius:14px; overflow:hidden; border:1.5px dashed var(--gold); background:var(--ivory-2); box-shadow:0 4px 14px rgba(0,0,0,0.04);">
+            <img src="${data.photos.face}" alt="Face Scan" style="width:100%; height:100%; object-fit:cover; object-position:top center;">
+            <div style="position:absolute; bottom:0; inset-x:0; background:rgba(42,27,46,0.92); backdrop-filter:blur(4px); color:var(--ivory); padding:10px 14px; font-size:12px; display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase;">01 / Face Topography</span>
+              <span style="color:var(--gold-lt); font-size:11px;">ตรวจจับ 68 จุด</span>
             </div>
           </div>
         </div>
@@ -112,12 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <!-- Body Upload -->
         <div class="panel" style="padding:24px; text-align:center; margin-bottom:0;">
           <h3 style="font-size:17px; margin-bottom:6px;">ภาพถ่ายเต็มตัว</h3>
-          <div style="font-size:13px; color:#8a7d6a; margin-bottom:16px;">แนะนำ: ยืนตรง เห็นสัดส่วนโครงสร้างร่างกายชัดเจน</div>
-          <div class="dropzone" style="height:230px; position:relative; border-radius:12px; overflow:hidden; border:1.5px dashed var(--gold); background:var(--ivory);">
-            <img src="${data.photos.body}" alt="Body Scan" style="width:100%; height:100%; object-fit:cover;">
-            <div style="position:absolute; bottom:0; inset-x:0; background:rgba(42,27,46,0.85); color:var(--ivory); padding:8px 12px; font-size:12px; display:flex; justify-content:space-between; align-items:center;">
-              <span>02 / Skeletal Geometry</span>
-              <span style="color:var(--gold-lt);">วิเคราะห์กระดูก 14 จุด</span>
+          <div style="font-size:13px; color:#8a7d6a; margin-bottom:16px;">แนะนำ: ยืนตรง เห็นสัดส่วนโครงสร้างร่างกายชัดเจนตั้งแต่ศีรษะจรดเท้า</div>
+          <div class="dropzone" style="height:360px; max-width:280px; margin:0 auto; position:relative; border-radius:14px; overflow:hidden; border:1.5px dashed var(--gold); background:var(--ivory-2); box-shadow:0 4px 14px rgba(0,0,0,0.04);">
+            <img src="${data.photos.body}" alt="Body Scan" style="width:100%; height:100%; object-fit:cover; object-position:center top;">
+            <div style="position:absolute; bottom:0; inset-x:0; background:rgba(42,27,46,0.92); backdrop-filter:blur(4px); color:var(--ivory); padding:10px 14px; font-size:12px; display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase;">02 / Skeletal Geometry</span>
+              <span style="color:var(--gold-lt); font-size:11px;">วิเคราะห์กระดูก 14 จุด</span>
             </div>
           </div>
         </div>
@@ -303,8 +303,8 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <div class="panel-body">
             <div style="display:flex; gap:20px; align-items:center; margin-bottom:20px;">
-              <div style="width:100px; height:150px; border-radius:12px; overflow:hidden; border:1px solid var(--line); flex-shrink:0;">
-                <img src="${data.photos.body}" alt="Body" style="width:100%; height:100%; object-fit:cover;">
+              <div style="width:130px; height:200px; border-radius:12px; overflow:hidden; border:1px solid var(--line); flex-shrink:0; box-shadow:0 4px 12px rgba(0,0,0,0.04);">
+                <img src="${data.photos.body}" alt="Body" style="width:100%; height:100%; object-fit:cover; object-position:center top;">
               </div>
               <div>
                 <div style="font-size:12px; color:var(--gold); font-weight:700; text-transform:uppercase;">ผลการประเมินโครงสร้าง</div>
