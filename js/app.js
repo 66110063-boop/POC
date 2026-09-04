@@ -245,8 +245,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <!-- Result Header Info -->
       <div style="display:flex; align-items:center; gap:16px; margin-bottom:24px;">
-        <div style="width:68px; height:68px; border-radius:50%; overflow:hidden; border:2.5px solid var(--gold); flex-shrink:0;">
-          <img src="${data.photos.face}" alt="Face" style="width:100%; height:100%; object-fit:cover;">
+        <div style="width:68px; height:68px; border-radius:50%; overflow:hidden; border:2.5px solid var(--gold); flex-shrink:0; background:var(--ivory-2);">
+          <img src="${data.photos.face}" alt="Face" style="width:100%; height:100%; object-fit:cover; object-position:center 20%;">
         </div>
         <div>
           <h2 style="font-size:20px; color:var(--plum);">${data.name}</h2>
@@ -263,9 +263,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="panel-body">
           <div class="face-map">
             <!-- Face Diagram with Crosshair Markers -->
-            <div class="face-diagram-wrap" style="height:340px;">
-              <img src="${data.photos.face}" alt="Face Subject" style="width:100%; height:100%; object-fit:cover;">
-              <div style="position:absolute; inset:0; background:rgba(28,20,16,0.15);"></div>
+            <div class="face-diagram-wrap">
+              <img src="${data.photos.face}" alt="Face Subject">
+              <div style="position:absolute; inset:0; background:rgba(28,20,16,0.15); pointer-events:none;"></div>
 
               ${face.landmarks.map(lm => `
                 <div class="crosshair-dot" style="left:${lm.x}%; top:${lm.y}%;" title="${lm.label}: ${lm.zone}"></div>
@@ -296,8 +296,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="directives-grid">
         <!-- Hair -->
         <div class="panel" style="margin-bottom:0; overflow:hidden;">
-          <div style="height:150px; overflow:hidden;">
-            <img src="${face.recommendations.hair.image}" alt="Hair" style="width:100%; height:100%; object-fit:cover;">
+          <div style="height:200px; overflow:hidden; background:var(--ivory-2);">
+            <img src="${face.recommendations.hair.image}" alt="Hair" style="width:100%; height:100%; object-fit:cover; object-position:center;">
           </div>
           <div style="padding:16px;">
             <div style="font-size:11px; color:var(--gold); font-weight:700; text-transform:uppercase; margin-bottom:2px;">
@@ -310,8 +310,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <!-- Makeup -->
         <div class="panel" style="margin-bottom:0; overflow:hidden;">
-          <div style="height:150px; overflow:hidden;">
-            <img src="${face.recommendations.makeup.image}" alt="Makeup" style="width:100%; height:100%; object-fit:cover;">
+          <div style="height:200px; overflow:hidden; background:var(--ivory-2);">
+            <img src="${face.recommendations.makeup.image}" alt="Makeup" style="width:100%; height:100%; object-fit:cover; object-position:center;">
           </div>
           <div style="padding:16px;">
             <div style="font-size:11px; color:var(--gold); font-weight:700; text-transform:uppercase; margin-bottom:2px;">
@@ -324,8 +324,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <!-- Eyewear -->
         <div class="panel" style="margin-bottom:0; overflow:hidden;">
-          <div style="height:150px; overflow:hidden;">
-            <img src="${face.recommendations.eyewear.image}" alt="Eyewear" style="width:100%; height:100%; object-fit:cover;">
+          <div style="height:200px; overflow:hidden; background:var(--ivory-2);">
+            <img src="${face.recommendations.eyewear.image}" alt="Eyewear" style="width:100%; height:100%; object-fit:cover; object-position:center;">
           </div>
           <div style="padding:16px;">
             <div style="font-size:11px; color:var(--gold); font-weight:700; text-transform:uppercase; margin-bottom:2px;">
@@ -368,8 +368,8 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <div class="panel-body">
             <div style="display:flex; gap:20px; align-items:center; margin-bottom:20px;">
-              <div style="width:130px; height:200px; border-radius:12px; overflow:hidden; border:1px solid var(--line); flex-shrink:0; box-shadow:0 4px 12px rgba(0,0,0,0.04);">
-                <img src="${data.photos.body}" alt="Body" style="width:100%; height:100%; object-fit:cover; object-position:center top;">
+              <div style="width:150px; height:240px; border-radius:12px; overflow:hidden; border:1px solid var(--line); flex-shrink:0; box-shadow:0 4px 12px rgba(0,0,0,0.04); background:#E8E0D2; display:flex; align-items:center; justify-content:center;">
+                <img src="${data.photos.body}" alt="Body" style="width:100%; height:100%; object-fit:contain; object-position:center; padding:4px;">
               </div>
               <div>
                 <div style="font-size:12px; color:var(--gold); font-weight:700; text-transform:uppercase;">ผลการประเมินโครงสร้าง</div>
