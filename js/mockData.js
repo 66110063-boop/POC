@@ -368,10 +368,10 @@ const MOCK_DATA = {
           shoes: "Cap-Toe Oxford Shoes หนังแท้ขัดเงาสี Dark Espresso"
         },
         items: [
-          { name: "Italian Wool Double-Breasted Suit", brand: "Sartorial Sovereign", price: "฿ 12,900", image: "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=400&auto=format&fit=crop&q=80", tag: "ทรง Straight ไม่ทับบารมี" },
-          { name: "Natural Black Onyx Silver Cufflinks", brand: "Regal Atelier", price: "฿ 3,500", image: "https://images.unsplash.com/photo-1590548784585-643d2b9f2925?w=400&auto=format&fit=crop&q=80", tag: "นิลดำสลายพลังงานลบ" },
-          { name: "Silk Jacquard Tie in Deep Burgundy", brand: "Milano Astrale", price: "฿ 2,200", image: "https://images.unsplash.com/photo-1589756823695-278bc923f962?w=400&auto=format&fit=crop&q=80", tag: "ธาตุไฟดึงดูดชัยชนะ" },
-          { name: "Titanium Hexagon Sunglasses in Gunmetal", brand: "Krypton Eyewear", price: "฿ 6,200", image: "https://images.unsplash.com/photo-1508296695146-257a814070b4?w=400&auto=format&fit=crop&q=80", tag: "เสริมโหงวเฮ้งสันจมูก" }
+          { name: "Italian Wool Double-Breasted Suit", brand: "Sartorial Sovereign", price: "฿ 14,500", image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&auto=format&fit=crop&q=80", tag: "ทรง Straight คัตติ้งคมไม่ทับบารมี" },
+          { name: "Crisp White Royal Poplin Shirt", brand: "Siam Sartoriale", price: "฿ 2,800", image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=400&auto=format&fit=crop&q=80", tag: "ปก Spread Collar ขับแนวสันกรามมังกร" },
+          { name: "Swiss Chronograph Steel Watch", brand: "Horology Astral", price: "฿ 28,000", image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=400&auto=format&fit=crop&q=80", tag: "ควบคุมจังหวะเวลาแห่งชัยชนะ" },
+          { name: "Cap-Toe Oxford Leather Shoes", brand: "Artisan Cobbler", price: "฿ 5,900", image: "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=400&auto=format&fit=crop&q=80", tag: "รากฐานมั่นคง เสริมพลังธาตุดิน" }
         ],
         fengShuiReason: "รูปร่าง Straight จำเป็นต้องสวมสูทที่มีโครงสร้างชัดเจน ไม่หลวมโพรก เพื่อให้ 'บารมีไม่ถูกทับถม' สีกรมท่าช่วยเติมธาตุน้ำที่พร่องในดวงชะตา ทำให้การเจรจาปิดดีลมีความยืดหยุ่นสูงขึ้น",
         beautyGuide: "เซ็ตผม Quiff ยกโคนสูงเปิดหน้าผากรับแสงอาทิตย์ โกนหนวดบริเวณลำคอให้เกลี้ยงเกลา"
@@ -390,9 +390,9 @@ const MOCK_DATA = {
           shoes: "Patent Leather Velvet Slippers รองเท้ากำมะหยี่สีดำขลับ"
         },
         items: [
-          { name: "Charcoal Slate Peak-Lapel Tuxedo", brand: "Savile Row Atelier", price: "฿ 18,500", image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300&auto=format&fit=crop&q=80", tag: "ปกแหลมเสริมพลังพญาเหยี่ยว" },
-          { name: "3-Color Tiger's Eye Gold Signet Ring", brand: "Imperial Gemology", price: "฿ 8,900", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=300&auto=format&fit=crop&q=80", tag: "สวมนิ้วชี้ซ้ายคุมอำนาจเงิน" },
-          { name: "Swiss Chronograph Steel Blue Dial", brand: "Horology Astral", price: "฿ 28,000", image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=300&auto=format&fit=crop&q=80", tag: "ควบคุมจังหวะเวลาแห่งชัยชนะ" }
+          { name: "Charcoal Slate Peak-Lapel Tuxedo", brand: "Savile Row Atelier", price: "฿ 18,500", image: "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=400&auto=format&fit=crop&q=80", tag: "ปกแหลมเสริมพลังพญาเหยี่ยว" },
+          { name: "Crisp White Pleated Tuxedo Shirt", brand: "Imperial Sartorial", price: "฿ 3,200", image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=400&auto=format&fit=crop&q=80", tag: "เสริมสง่าราศีและออร่าผู้นำ" },
+          { name: "Swiss Chronograph Steel Blue Dial", brand: "Horology Astral", price: "฿ 28,000", image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=400&auto=format&fit=crop&q=80", tag: "ควบคุมจังหวะเวลาแห่งชัยชนะ" }
         ],
         fengShuiReason: "ปกแหลม (Peak Lapel) พุ่งขึ้นด้านบน สอดรับกับแนวคิ้วมังกรและลัคนาราศีสิงห์ หนุนส่งเกียรติยศและชื่อเสียงให้พุ่งทะยานสู่จุดสูงสุด",
         beautyGuide: "ปัดแป้งคุมมันไม่ให้หน้าผากเงาเกินไป เน้นดวงตาคมชัดสง่างาม"
@@ -410,9 +410,9 @@ const MOCK_DATA = {
           shoes: "Chelsea Boots หนังกลับสีน้ำตาลเอสเปรสโซ"
         },
         items: [
-          { name: "Dark Espresso Suede Jacket", brand: "Nomad Sartorial", price: "฿ 8,500", image: "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=300&auto=format&fit=crop&q=80", tag: "สีช็อกโกแลตเสริมธาตุดิน" },
-          { name: "Black Rutile Quartz (หินแก้วขนเหล็ก)", brand: "Sanctuary Shield", price: "฿ 3,900", image: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?w=400&auto=format&fit=crop&q=80", tag: "มหาเสน่ห์ & ปกป้องภัย" },
-          { name: "Onyx Bead & Meteorite Pendant", brand: "Cosmic Forge", price: "฿ 2,800", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=300&auto=format&fit=crop&q=80", tag: "ดูดซับแรงดึงดูดเพศตรงข้าม" }
+          { name: "Dark Espresso Suede Jacket", brand: "Nomad Sartorial", price: "฿ 8,500", image: "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=400&auto=format&fit=crop&q=80", tag: "สีช็อกโกแลตเสริมธาตุดิน" },
+          { name: "Slim-Fit Raw Selvedge Denim", brand: "Craftsman Indigo", price: "฿ 4,500", image: "https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=400&auto=format&fit=crop&q=80", tag: "ธาตุน้ำครามเข้มเสริมเสน่ห์" },
+          { name: "Handcrafted Leather Chelsea Boots", brand: "Artisan Cobbler", price: "฿ 5,900", image: "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=400&auto=format&fit=crop&q=80", tag: "รากฐานหนักแน่นน่าค้นหา" }
         ],
         fengShuiReason: "การปลดกระดุมบนเปิดทางเดินพลังงานหน้าอก ช่วยลดทอนความดุดันของลัคนาสิงห์ลง เปลี่ยนเป็นเสน่ห์อันน่าหลงใหลและดึงดูดบทสนทนาที่ลึกซึ้ง",
         beautyGuide: "เซ็ตผมให้ดูมี Texture ยุ่งเล็กน้อยอย่างเป็นธรรมชาติ กลิ่นกายสัมผัส Woody-Amber อบอุ่น"
@@ -430,9 +430,9 @@ const MOCK_DATA = {
           shoes: "Woven Leather Slip-ons รองเท้าหนังถักสีแทนธรรมชาติ"
         },
         items: [
-          { name: "Smoke White Relaxed Linen Shirt", brand: "Siam Zen Atelier", price: "฿ 2,100", image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=300&auto=format&fit=crop&q=80", tag: "ดูดซับพรอันศักดิ์สิทธิ์" },
-          { name: "Tibetan 9-Eye Dzi Bead Bracelet", brand: "Sacred Relics", price: "฿ 3,500", image: "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=400&auto=format&fit=crop&q=80", tag: "เสริมบารมีเก้าทิศ" },
-          { name: "Handmade Braided Holy Thread", brand: "Monastery Craft", price: "฿ 990", image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=300&auto=format&fit=crop&q=80", tag: "ผ่านพิธีมหาพุทธาภิเษก" }
+          { name: "Smoke White Relaxed Linen Shirt", brand: "Siam Zen Atelier", price: "฿ 2,100", image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&auto=format&fit=crop&q=80", tag: "ดูดซับพรอันศักดิ์สิทธิ์" },
+          { name: "Straight Khaki Linen Trousers", brand: "Eastern Loom", price: "฿ 2,400", image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&auto=format&fit=crop&q=80", tag: "โทนสีดินเสริมความมั่นคง" },
+          { name: "Cap-Toe Dark Leather Loafers", brand: "Artisan Cobbler", price: "฿ 4,900", image: "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=400&auto=format&fit=crop&q=80", tag: "ก้าวเดินรับพลังมงคล" }
         ],
         fengShuiReason: "เสื้อผ้าสีขาวควันบุหรี่และกางเกงสีกากีดิน ผสานธาตุทองและธาตุดิน ช่วยสร้างรากฐานดวงชะตาให้แข็งแกร่ง ป้องกันเคราะห์ซ้ำ และเปิดรับพรมงคลอย่างเต็มเปี่ยม",
         beautyGuide: "ล้างหน้าสะอาดหมดจด ปราศจากเครื่องสำอาง แต่งกายเรียบง่ายเปี่ยมศรัทธา"
