@@ -53,18 +53,20 @@ h1, h2, h3, h4 {
   color: var(--ink);
 }
 
-.app {
-  max-width: 1760px;
-  margin: 0 auto;
-  padding: 0 clamp(16px, 2.5vw, 40px) 80px;
+/* Container หลักคุมความกว้างไม่ให้ล้นจอ Desktop */
+.container, .app {
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+  box-sizing: border-box;
 }
 
 /* ===== TOPBAR ===== */
 .topbar {
   background: var(--plum);
   color: var(--ivory);
-  padding: 16px clamp(16px, 2.5vw, 40px);
+  padding: 16px 20px;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -73,9 +75,11 @@ h1, h2, h3, h4 {
 }
 
 .topbar-inner {
-  max-width: 1760px;
-  margin: 0 auto;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -716,23 +720,28 @@ h1, h2, h3, h4 {
   color: var(--plum);
 }
 
-/* ===== STEP 1: STUDIO 3-COLUMN CONSOLE ===== */
+/* DESKTOP (จอคอม): แสดง 3 คอลัมน์สมดุล */
 .step1-studio-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.25fr;
+  grid-template-columns: 1fr 1fr 1.25fr; /* ปรับสัดส่วนซ้าย-กลาง-ขวา */
   gap: 24px;
   align-items: stretch;
   margin-bottom: 28px;
 }
 
 .step1-card {
-  background: var(--white);
-  border: 1px solid var(--line);
+  background: var(--white, #ffffff);
+  border: 1px solid var(--line, #e2e8f0);
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(28, 20, 16, 0.03);
   display: flex;
   flex-direction: column;
+}
+
+.item-thumb {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
 .step1-card-h {
@@ -1025,6 +1034,21 @@ h1, h2, h3, h4 {
     flex-shrink: 0;
     padding: 8px 16px;
     font-size: 13px;
+  }
+/* MOBILE (มือถือ): สลับเป็น 1 คอลัมน์ทันทีเมื่อจอแคบกว่า 768px */
+@media (max-width: 768px) {
+  .step1-studio-grid {
+    grid-template-columns: 1fr; /* ยุบเหลือคอลัมน์เดียวเรียงลงมา */
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .item-thumb {
+    height: 180px; /* ลดความสูงรูปภาพไม่ให้กินพื้นที่จอมือถือ */
+  }
+
+  .step1-card {
+    padding: 16px;
   }
 }
 
