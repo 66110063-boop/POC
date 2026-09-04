@@ -192,24 +192,24 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="step1-card-body">
             <div class="step1-form-grid">
               <div class="form-field">
-                <label>วัน เดือน ปีเกิด</label>
-                <input type="text" value="${data.birth.date}" readonly>
+                <label for="birth-date">วัน เดือน ปีเกิด</label>
+                <input type="text" id="birth-date" name="birth-date" value="${data.birth.date}" readonly>
               </div>
               <div class="form-field">
-                <label>วันกำเนิด & ดาวครองวัน</label>
-                <input type="text" value="${data.birth.dayName}" readonly>
+                <label for="birth-day">วันกำเนิด & ดาวครองวัน</label>
+                <input type="text" id="birth-day" name="birth-day" value="${data.birth.dayName}" readonly>
               </div>
               <div class="form-field">
-                <label>เวลาตกฟาก (Solar True Time)</label>
-                <input type="text" value="${data.birth.time}" readonly>
+                <label for="birth-time">เวลาตกฟาก (Solar True Time)</label>
+                <input type="text" id="birth-time" name="birth-time" value="${data.birth.time}" readonly>
               </div>
               <div class="form-field">
-                <label>จังหวัดเกิด (ภูมิลำเนา)</label>
-                <input type="text" value="${data.birth.province}" readonly>
+                <label for="birth-province">จังหวัดเกิด (ภูมิลำเนา)</label>
+                <input type="text" id="birth-province" name="birth-province" value="${data.birth.province}" readonly>
               </div>
               <div class="form-field full-w">
-                <label>ลัคนาราศี & ดาวเกษตรบดี</label>
-                <input type="text" value="${data.birth.lagna} — ${data.birth.rulingPlanet}" readonly>
+                <label for="birth-lagna">ลัคนาราศี & ดาวเกษตรบดี</label>
+                <input type="text" id="birth-lagna" name="birth-lagna" value="${data.birth.lagna} — ${data.birth.rulingPlanet}" readonly>
               </div>
             </div>
 
