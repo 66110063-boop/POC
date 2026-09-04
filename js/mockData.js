@@ -143,18 +143,18 @@ const MOCK_DATA = {
         title: "Professional",
         subtitle: "การทำงานระดับบริหาร & การเจรจาธุรกิจเชิงกลยุทธ์",
         concept: "เสริมพลังวาจาเมตตา ความน่าเชื่อถือ และปิดดีลสำเร็จ",
-        outfitImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=85",
+        outfitImage: "https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?w=800&auto=format&fit=crop&q=85",
         breakdown: {
-          top: "Tailored Wool Melange Blazer คัตติ้งผ้าวูลทิ้งตัวสีเทาชาร์โคลสุขุม เสริมความน่าเชื่อถือระดับผู้บริหาร",
-          inner: "Crisp White Poplin Silk Shirt เสื้อเชิ้ตคอปกผ้าคอตตอนซิลค์สีขาวบริสุทธิ์ ขับออร่าวาจาเจรจา",
-          bottom: "High-Waisted Slim Tailored Trousers กางเกงสแล็คเอวสูงทรงกระบอกตรงสีดำคลาสสิก เสริมช่วงขาให้ดูเพรียวสง่า",
-          shoes: "Pointed-Toe Leather Pumps ส้นสูงหัวแหลมหนังแท้สีดำขลับ เสริมความเด็ดเดี่ยวในการตัดสินใจ"
+          top: "Tailored Power Blazer in Onyx คัตติ้งผ้าวูลทิ้งตัวเข้ารูปสีดำคลาสสิก เสริมพลังอำนาจและความน่าเกรงขาม",
+          inner: "South Sea Pearl & Rose Gold Brooch เข็มกลัดไข่มุกเซาท์ซีธรรมชาติ เติมความอ่อนช้อยเสริมพลังหยิน",
+          bottom: "Structured Executive Leather Handbag กระเป๋าถือหนังแท้ทรงเกียรติยศ กักเก็บพลังงานทรัพย์สิน",
+          shoes: "Imperial Green Jade Power Ring แหวนหยกจักรพรรดิ์แท้ หนุนส่งธาตุลมดาวพุธ เสริมอำนาจการเจรจา"
         },
         items: [
-          { name: "Tailored Wool Melange Blazer", brand: "Atelier Aura", price: "฿ 4,290", image: "https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=400&auto=format&fit=crop&q=80", tag: "ทรง Straight/Wave เสริมสง่าราศี" },
-          { name: "Crisp White Poplin Silk Shirt", brand: "Siam Sericulture", price: "฿ 1,650", image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&auto=format&fit=crop&q=80", tag: "ธาตุทองดึงดูดปัญญาความกระจ่าง" },
-          { name: "High-Waisted Slim Tailored Trousers", brand: "Maison Celestial", price: "฿ 2,490", image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&auto=format&fit=crop&q=80", tag: "ช่วงเอวคอดรับสรีระ Wave" },
-          { name: "Pointed-Toe Leather Pumps in Onyx", brand: "Optique Savoir", price: "฿ 3,200", image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&auto=format&fit=crop&q=80", tag: "ก้าวหน้ามั่นคงทุกการเจรจา" }
+          { name: "Tailored Power Blazer in Onyx", brand: "Atelier Aura", price: "฿ 4,290", image: "https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?w=400&auto=format&fit=crop&q=80", tag: "ทรง Wave เสริมสง่าราศีบารมี" },
+          { name: "South Sea Pearl & Rose Gold Brooch", brand: "Ratanakosin Heritage", price: "฿ 4,800", image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&auto=format&fit=crop&q=80", tag: "ไข่มุกแท้เสริมเมตตามหานิยม" },
+          { name: "Structured Executive Leather Handbag", brand: "Celestial Craft", price: "฿ 3,450", image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&auto=format&fit=crop&q=80", tag: "กระเป๋าเหนี่ยวนำความมั่งคั่ง" },
+          { name: "Imperial Green Jade Power Ring", brand: "Masterpiece Jade", price: "฿ 6,500", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&auto=format&fit=crop&q=80", tag: "หยกจักรพรรดิหนุนธาตุลมดาวพุธ" }
         ],
         fengShuiReason: "ลัคนาเมถุนเป็นธาตุลม ได้รับแรงส่งเสริมจากสีเขียวเข้มของดาวพุธเกษตราธิบดี ผสานกับสรีระแบบ Wave ที่ต้องการผ้าทิ้งตัวพลิ้วไหว ช่วยให้การเจรจาลื่นไหล ไร้ข้อติดขัดทางพลังงาน",
         beautyGuide: "เมคอัพโทน Warm Peach ขับไฮไลต์โหนกแก้มแบบ Dewy Finish เพื่อดึงดูดผู้ใหญ่อุปถัมภ์"
