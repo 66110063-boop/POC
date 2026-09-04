@@ -80,7 +80,7 @@ const MOCK_DATA = {
           category: "Spectacles",
           title: "Oval Titanium Frame",
           desc: "กรอบรีสี Rose Gold โลหะบาง ช่วยเกลาสมดุลแนวกราม",
-          image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&auto=format&fit=crop&q=80"
+          image: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=400&auto=format&fit=crop&q=80"
         }
       }
     },
@@ -152,9 +152,9 @@ const MOCK_DATA = {
         },
         items: [
           { name: "Olive Drape Tailored Blazer", brand: "Atelier Aura", price: "฿ 3,890", image: "https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?w=300&auto=format&fit=crop&q=80", tag: "หนุนธาตุลมดาวพุธ" },
-          { name: "Golden Rutile Quartz Bracelet (หินไหมทอง 4A)", brand: "Maison Celestial", price: "฿ 2,990", image: "https://images.unsplash.com/photo-1611591475152-47eac980be09?w=300&auto=format&fit=crop&q=80", tag: "กักเก็บทรัพย์สินมั่นคง" },
-          { name: "Silk Satin Camisole in Champagne", brand: "Siam Sericulture", price: "฿ 1,450", image: "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=300&auto=format&fit=crop&q=80", tag: "ธาตุดินเสริมรากฐาน" },
-          { name: "Cat-Eye Rose Gold Titanium Glasses", brand: "Optique Savoir", price: "฿ 3,600", image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&auto=format&fit=crop&q=80", tag: "เปิดวิสัยทัศน์โหงวเฮ้ง" }
+          { name: "Golden Rutile Quartz Bracelet (หินไหมทอง 4A)", brand: "Maison Celestial", price: "฿ 2,990", image: "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=400&auto=format&fit=crop&q=80", tag: "กักเก็บทรัพย์สินมั่นคง" },
+          { name: "Silk Satin Camisole in Champagne", brand: "Siam Sericulture", price: "฿ 1,450", image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&auto=format&fit=crop&q=80", tag: "ธาตุดินเสริมรากฐาน" },
+          { name: "Cat-Eye Rose Gold Titanium Glasses", brand: "Optique Savoir", price: "฿ 3,600", image: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=400&auto=format&fit=crop&q=80", tag: "เปิดวิสัยทัศน์โหงวเฮ้ง" }
         ],
         fengShuiReason: "ลัคนาเมถุนเป็นธาตุลม ได้รับแรงส่งเสริมจากสีเขียวเข้มของดาวพุธเกษตราธิบดี ผสานกับสรีระแบบ Wave ที่ต้องการผ้าทิ้งตัวพลิ้วไหว ช่วยให้การเจรจาลื่นไหล ไร้ข้อติดขัดทางพลังงาน",
         beautyGuide: "เมคอัพโทน Warm Peach ขับไฮไลต์โหนกแก้มแบบ Dewy Finish เพื่อดึงดูดผู้ใหญ่อุปถัมภ์"
@@ -213,7 +213,7 @@ const MOCK_DATA = {
         },
         items: [
           { name: "Ivory Pearl Organic Linen Tunic", brand: "Bodhi Sartorial", price: "฿ 1,950", image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=300&auto=format&fit=crop&q=80", tag: "สะท้อนพลังงานลบ" },
-          { name: "Nephrite Green Jade Sacred Beads", brand: "Sanctuary Relics", price: "฿ 3,200", image: "https://images.unsplash.com/photo-1611591475152-47eac980be09?w=300&auto=format&fit=crop&q=80", tag: "ปรับสมดุลธาตุกาย" },
+          { name: "Nephrite Green Jade Sacred Beads", brand: "Sanctuary Relics", price: "฿ 3,200", image: "https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?w=400&auto=format&fit=crop&q=80", tag: "ปรับสมดุลธาตุกาย" },
           { name: "Hand-Loomed Cotton Tote Bag", brand: "Lanna Weavers", price: "฿ 890", image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=300&auto=format&fit=crop&q=80", tag: "ลายยันต์โภคทรัพย์โบราณ" }
         ],
         fengShuiReason: "ผ้าลินินสีขาวมุกทำหน้าที่เป็นเกราะสะท้อนพลังงานลบ และเปิดรับคลื่นความถี่บริสุทธิ์จากศาสนสถานเข้าสู่จิตใจอย่างสงบนิ่ง",
@@ -297,7 +297,7 @@ const MOCK_DATA = {
           category: "Spectacles",
           title: "Structured Titanium Frame",
           desc: "กรอบไททาเนียมทรงเหลี่ยมสี Gunmetal สะท้อนความเด็ดขาด",
-          image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&auto=format&fit=crop&q=80"
+          image: "https://images.unsplash.com/photo-1508296695146-257a814070b4?w=400&auto=format&fit=crop&q=80"
         }
       }
     },
@@ -368,10 +368,10 @@ const MOCK_DATA = {
           shoes: "Cap-Toe Oxford Shoes หนังแท้ขัดเงาสี Dark Espresso"
         },
         items: [
-          { name: "Italian Wool Double-Breasted Suit", brand: "Sartorial Sovereign", price: "฿ 12,900", image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=300&auto=format&fit=crop&q=80", tag: "ทรง Straight ไม่ทับบารมี" },
-          { name: "Natural Black Onyx Silver Cufflinks", brand: "Regal Atelier", price: "฿ 3,500", image: "https://images.unsplash.com/photo-1611591475152-47eac980be09?w=300&auto=format&fit=crop&q=80", tag: "นิลดำสลายพลังงานลบ" },
-          { name: "Silk Jacquard Tie in Deep Burgundy", brand: "Milano Astrale", price: "฿ 2,200", image: "https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?w=300&auto=format&fit=crop&q=80", tag: "ธาตุไฟดึงดูดชัยชนะ" },
-          { name: "Titanium Hexagon Sunglasses in Gunmetal", brand: "Krypton Eyewear", price: "฿ 6,200", image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=300&auto=format&fit=crop&q=80", tag: "เสริมโหงวเฮ้งสันจมูก" }
+          { name: "Italian Wool Double-Breasted Suit", brand: "Sartorial Sovereign", price: "฿ 12,900", image: "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=400&auto=format&fit=crop&q=80", tag: "ทรง Straight ไม่ทับบารมี" },
+          { name: "Natural Black Onyx Silver Cufflinks", brand: "Regal Atelier", price: "฿ 3,500", image: "https://images.unsplash.com/photo-1590548784585-643d2b9f2925?w=400&auto=format&fit=crop&q=80", tag: "นิลดำสลายพลังงานลบ" },
+          { name: "Silk Jacquard Tie in Deep Burgundy", brand: "Milano Astrale", price: "฿ 2,200", image: "https://images.unsplash.com/photo-1589756823695-278bc923f962?w=400&auto=format&fit=crop&q=80", tag: "ธาตุไฟดึงดูดชัยชนะ" },
+          { name: "Titanium Hexagon Sunglasses in Gunmetal", brand: "Krypton Eyewear", price: "฿ 6,200", image: "https://images.unsplash.com/photo-1508296695146-257a814070b4?w=400&auto=format&fit=crop&q=80", tag: "เสริมโหงวเฮ้งสันจมูก" }
         ],
         fengShuiReason: "รูปร่าง Straight จำเป็นต้องสวมสูทที่มีโครงสร้างชัดเจน ไม่หลวมโพรก เพื่อให้ 'บารมีไม่ถูกทับถม' สีกรมท่าช่วยเติมธาตุน้ำที่พร่องในดวงชะตา ทำให้การเจรจาปิดดีลมีความยืดหยุ่นสูงขึ้น",
         beautyGuide: "เซ็ตผม Quiff ยกโคนสูงเปิดหน้าผากรับแสงอาทิตย์ โกนหนวดบริเวณลำคอให้เกลี้ยงเกลา"
@@ -411,7 +411,7 @@ const MOCK_DATA = {
         },
         items: [
           { name: "Dark Espresso Suede Jacket", brand: "Nomad Sartorial", price: "฿ 8,500", image: "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=300&auto=format&fit=crop&q=80", tag: "สีช็อกโกแลตเสริมธาตุดิน" },
-          { name: "Black Rutile Quartz (หินแก้วขนเหล็ก)", brand: "Sanctuary Shield", price: "฿ 3,900", image: "https://images.unsplash.com/photo-1611591475152-47eac980be09?w=300&auto=format&fit=crop&q=80", tag: "มหาเสน่ห์ & ปกป้องภัย" },
+          { name: "Black Rutile Quartz (หินแก้วขนเหล็ก)", brand: "Sanctuary Shield", price: "฿ 3,900", image: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?w=400&auto=format&fit=crop&q=80", tag: "มหาเสน่ห์ & ปกป้องภัย" },
           { name: "Onyx Bead & Meteorite Pendant", brand: "Cosmic Forge", price: "฿ 2,800", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=300&auto=format&fit=crop&q=80", tag: "ดูดซับแรงดึงดูดเพศตรงข้าม" }
         ],
         fengShuiReason: "การปลดกระดุมบนเปิดทางเดินพลังงานหน้าอก ช่วยลดทอนความดุดันของลัคนาสิงห์ลง เปลี่ยนเป็นเสน่ห์อันน่าหลงใหลและดึงดูดบทสนทนาที่ลึกซึ้ง",
@@ -431,7 +431,7 @@ const MOCK_DATA = {
         },
         items: [
           { name: "Smoke White Relaxed Linen Shirt", brand: "Siam Zen Atelier", price: "฿ 2,100", image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=300&auto=format&fit=crop&q=80", tag: "ดูดซับพรอันศักดิ์สิทธิ์" },
-          { name: "Tibetan 9-Eye Dzi Bead Bracelet", brand: "Sacred Relics", price: "฿ 3,500", image: "https://images.unsplash.com/photo-1611591475152-47eac980be09?w=300&auto=format&fit=crop&q=80", tag: "เสริมบารมีเก้าทิศ" },
+          { name: "Tibetan 9-Eye Dzi Bead Bracelet", brand: "Sacred Relics", price: "฿ 3,500", image: "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=400&auto=format&fit=crop&q=80", tag: "เสริมบารมีเก้าทิศ" },
           { name: "Handmade Braided Holy Thread", brand: "Monastery Craft", price: "฿ 990", image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=300&auto=format&fit=crop&q=80", tag: "ผ่านพิธีมหาพุทธาภิเษก" }
         ],
         fengShuiReason: "เสื้อผ้าสีขาวควันบุหรี่และกางเกงสีกากีดิน ผสานธาตุทองและธาตุดิน ช่วยสร้างรากฐานดวงชะตาให้แข็งแกร่ง ป้องกันเคราะห์ซ้ำ และเปิดรับพรมงคลอย่างเต็มเปี่ยม",
