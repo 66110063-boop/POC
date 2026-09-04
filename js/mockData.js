@@ -143,7 +143,7 @@ const MOCK_DATA = {
         title: "Professional",
         subtitle: "การทำงานระดับบริหาร & การเจรจาธุรกิจเชิงกลยุทธ์",
         concept: "เสริมพลังวาจาเมตตา ความน่าเชื่อถือ และปิดดีลสำเร็จ",
-        outfitImage: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&auto=format&fit=crop&q=85",
+        outfitImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=85",
         breakdown: {
           top: "Soft-Tailored Forest Green Blazer คัตติ้งผ้าวูลผสมซิลค์ทิ้งตัว ไม่แข็งกระด้าง",
           inner: "Silk Satin Camisole สี Champagne Gold คอถ่วงเปิดช่วงลำคอรับแสงแห่งทรัพย์",
@@ -151,10 +151,10 @@ const MOCK_DATA = {
           shoes: "Pointed-Toe Leather Pumps ส้นสูงหัวแหลมสี Nude Beige"
         },
         items: [
-          { name: "Olive Drape Tailored Blazer", brand: "Atelier Aura", price: "฿ 3,890", image: "https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?w=300&auto=format&fit=crop&q=80", tag: "หนุนธาตุลมดาวพุธ" },
-          { name: "Golden Rutile Quartz Bracelet (หินไหมทอง 4A)", brand: "Maison Celestial", price: "฿ 2,990", image: "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=400&auto=format&fit=crop&q=80", tag: "กักเก็บทรัพย์สินมั่นคง" },
-          { name: "Silk Satin Camisole in Champagne", brand: "Siam Sericulture", price: "฿ 1,450", image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&auto=format&fit=crop&q=80", tag: "ธาตุดินเสริมรากฐาน" },
-          { name: "Cat-Eye Rose Gold Titanium Glasses", brand: "Optique Savoir", price: "฿ 3,600", image: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=400&auto=format&fit=crop&q=80", tag: "เปิดวิสัยทัศน์โหงวเฮ้ง" }
+          { name: "Olive Drape Tailored Blazer", brand: "Atelier Aura", price: "฿ 3,890", image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&auto=format&fit=crop&q=80", tag: "หนุนธาตุลมดาวพุธ" },
+          { name: "Golden Rutile Quartz Bracelet (หินไหมทอง 4A)", brand: "Maison Celestial", price: "฿ 2,990", image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400&auto=format&fit=crop&q=80", tag: "กักเก็บทรัพย์สินมั่นคง" },
+          { name: "Silk Satin Camisole in Champagne", brand: "Siam Sericulture", price: "฿ 1,450", image: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=400&auto=format&fit=crop&q=80", tag: "ธาตุดินเสริมรากฐาน" },
+          { name: "Cat-Eye Rose Gold Titanium Glasses", brand: "Optique Savoir", price: "฿ 3,600", image: "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=400&auto=format&fit=crop&q=80", tag: "เปิดวิสัยทัศน์โหงวเฮ้ง" }
         ],
         fengShuiReason: "ลัคนาเมถุนเป็นธาตุลม ได้รับแรงส่งเสริมจากสีเขียวเข้มของดาวพุธเกษตราธิบดี ผสานกับสรีระแบบ Wave ที่ต้องการผ้าทิ้งตัวพลิ้วไหว ช่วยให้การเจรจาลื่นไหล ไร้ข้อติดขัดทางพลังงาน",
         beautyGuide: "เมคอัพโทน Warm Peach ขับไฮไลต์โหนกแก้มแบบ Dewy Finish เพื่อดึงดูดผู้ใหญ่อุปถัมภ์"
