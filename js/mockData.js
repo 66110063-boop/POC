@@ -145,16 +145,16 @@ const MOCK_DATA = {
         concept: "เสริมพลังวาจาเมตตา ความน่าเชื่อถือ และปิดดีลสำเร็จ",
         outfitImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=85",
         breakdown: {
-          top: "Soft-Tailored Forest Green Blazer คัตติ้งผ้าวูลผสมซิลค์ทิ้งตัว ไม่แข็งกระด้าง",
-          inner: "Silk Satin Camisole สี Champagne Gold คอถ่วงเปิดช่วงลำคอรับแสงแห่งทรัพย์",
-          bottom: "High-Waisted Flowing Trousers กางเกงเอวสูงทรงกระบอกตรงสีครีมงาช้าง",
-          shoes: "Pointed-Toe Leather Pumps ส้นสูงหัวแหลมสี Nude Beige"
+          top: "Tailored Wool Melange Blazer คัตติ้งผ้าวูลทิ้งตัวสีเทาชาร์โคลสุขุม เสริมความน่าเชื่อถือระดับผู้บริหาร",
+          inner: "Crisp White Poplin Silk Shirt เสื้อเชิ้ตคอปกผ้าคอตตอนซิลค์สีขาวบริสุทธิ์ ขับออร่าวาจาเจรจา",
+          bottom: "High-Waisted Slim Tailored Trousers กางเกงสแล็คเอวสูงทรงกระบอกตรงสีดำคลาสสิก เสริมช่วงขาให้ดูเพรียวสง่า",
+          shoes: "Pointed-Toe Leather Pumps ส้นสูงหัวแหลมหนังแท้สีดำขลับ เสริมความเด็ดเดี่ยวในการตัดสินใจ"
         },
         items: [
-          { name: "Olive Drape Tailored Blazer", brand: "Atelier Aura", price: "฿ 3,890", image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&auto=format&fit=crop&q=80", tag: "หนุนธาตุลมดาวพุธ" },
-          { name: "Golden Rutile Quartz Bracelet (หินไหมทอง 4A)", brand: "Maison Celestial", price: "฿ 2,990", image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400&auto=format&fit=crop&q=80", tag: "กักเก็บทรัพย์สินมั่นคง" },
-          { name: "Silk Satin Camisole in Champagne", brand: "Siam Sericulture", price: "฿ 1,450", image: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=400&auto=format&fit=crop&q=80", tag: "ธาตุดินเสริมรากฐาน" },
-          { name: "Cat-Eye Rose Gold Titanium Glasses", brand: "Optique Savoir", price: "฿ 3,600", image: "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=400&auto=format&fit=crop&q=80", tag: "เปิดวิสัยทัศน์โหงวเฮ้ง" }
+          { name: "Tailored Wool Melange Blazer", brand: "Atelier Aura", price: "฿ 4,290", image: "https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=400&auto=format&fit=crop&q=80", tag: "ทรง Straight/Wave เสริมสง่าราศี" },
+          { name: "Crisp White Poplin Silk Shirt", brand: "Siam Sericulture", price: "฿ 1,650", image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&auto=format&fit=crop&q=80", tag: "ธาตุทองดึงดูดปัญญาความกระจ่าง" },
+          { name: "High-Waisted Slim Tailored Trousers", brand: "Maison Celestial", price: "฿ 2,490", image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&auto=format&fit=crop&q=80", tag: "ช่วงเอวคอดรับสรีระ Wave" },
+          { name: "Pointed-Toe Leather Pumps in Onyx", brand: "Optique Savoir", price: "฿ 3,200", image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&auto=format&fit=crop&q=80", tag: "ก้าวหน้ามั่นคงทุกการเจรจา" }
         ],
         fengShuiReason: "ลัคนาเมถุนเป็นธาตุลม ได้รับแรงส่งเสริมจากสีเขียวเข้มของดาวพุธเกษตราธิบดี ผสานกับสรีระแบบ Wave ที่ต้องการผ้าทิ้งตัวพลิ้วไหว ช่วยให้การเจรจาลื่นไหล ไร้ข้อติดขัดทางพลังงาน",
         beautyGuide: "เมคอัพโทน Warm Peach ขับไฮไลต์โหนกแก้มแบบ Dewy Finish เพื่อดึงดูดผู้ใหญ่อุปถัมภ์"
